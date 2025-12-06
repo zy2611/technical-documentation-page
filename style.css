@@ -1,55 +1,62 @@
-/* media query for ipads */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    header {
-    font-size: 24px; /* Reduces size of header font */
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-html, body {
-  font-family: 'Open Sans', Arial, sans-serif;
-}
-header {
-  font-size: 32px;
-}
+
+/* NAVBAR FIXED LEFT */
 #navbar {
   position: fixed;
-  text-decoration: none;
-  width: 10vw;
-  min-width: 300px;
-  left: 0px;
-  border-right: 1px solid #000;
+  left: 0;
+  top: 0;
+  width: 250px;
   height: 100%;
-  text-align: center;
+  background: #f4f4f4;
+  border-right: 2px solid #ccc;
+  padding: 20px;
 }
+
+#navbar header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 .nav-link {
   display: block;
+  padding: 10px 0;
   text-decoration: none;
   color: black;
-  text-align: left;
-  font-size: 18px;
-  border-top: 1px solid black;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 30px;
-  padding-right: 10px;
 }
+
+/* MAIN DOC */
 #main-doc {
-  display: inline-block;
-  margin-left: 320px;
+  margin-left: 270px;
+  padding: 20px;
 }
-code {  /* took this from the examples :) */
-    white-space: pre;
+
+section {
+  margin-bottom: 60px;
+}
+
+code {
+  background: #eee;
+  padding: 5px 10px;
+  display: block;
+  margin: 10px 0;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 800px) {
+  #navbar {
+    width: 100%;
+    height: auto;
     position: relative;
-    word-break: normal;
-    word-wrap: normal;
-    display: block;
-    text-align: left;
-    line-height: 2;
-    background-color: #f7f7f7;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
-@media
